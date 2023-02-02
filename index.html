@@ -1,0 +1,157 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+        <title>GPA Calculator</title>
+    </head>
+    <body>
+        <!-- Cool! -->
+        <div class="cool"></div>
+
+        <p>
+            Hello! This is a school GPA calculator made by Yousef
+            Alaaeldin for Capital International Schools!
+        </p>
+
+        <!-- Grade -->
+        <label>Grade:</label>
+        <select id="grade">
+            <option>9</option>
+            <option>10</option>
+            <option>11</option>
+            <option>12</option>
+        </select>
+
+        <!-- Courses -->
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="2">
+                        <button class="gradeOption selectedGradeOption" id="gradeOptionLetter">Letter</button>
+                        <button class="gradeOption" id="gradeOptionPercentage">Percentage</button>
+                    </th>
+                </tr>
+                <tr><th>Course Name</th><th>Grade</th></tr>
+            </thead>
+            <tbody class="courses" id="courses"></tbody>
+            <tfoot>
+                <tr>
+                    <!-- GPA -->
+                    <td colspan="2"><span class="gpa" id="gpa">GPA: 0</span></td>
+                </tr>
+            </tfoot>
+        </table>
+        <p class="warn" id="warn">Grade must be between 0 and 100, inclusive.</p>
+
+        <!-- Conversion Table -->
+        <table class="gradesKey">
+            <thead>
+                <tr><th colspan="3">Capital International Schools's Grade's
+                    Key</th></tr>
+                <tr><th>Grade</th><th>GPA</th><th>Percentage</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>A+</td><td>4</td><td>97-100</td></tr>
+                <tr><td>A</td><td>4</td><td>93-96</td></tr>
+                <tr><td>A-</td><td>3.9</td><td>90-92</td></tr>
+                <tr><td>B+</td><td>3.7</td><td>87-89</td></tr>
+                <tr><td>B</td><td>3.4</td><td>83-86</td></tr>
+                <tr><td>B-</td><td>3</td><td>80-82</td></tr>
+                <tr><td>C+</td><td>2.7</td><td>77-79</td></tr>
+                <tr><td>C</td><td>2.4</td><td>73-76</td></tr>
+                <tr><td>C-</td><td>2</td><td>70-72</td></tr>
+                <tr><td>D+</td><td>1.7</td><td>67-69</td></tr>
+                <tr><td>D</td><td>1.4</td><td>63-66</td></tr>
+                <tr><td>D-</td><td>1</td><td>60-62</td></tr>
+                <tr><td>F</td><td>0</td><td>0-59</td></tr>
+            </tbody>
+        </table>
+
+        <!-- FAQs -->
+        <div class="FAQ">
+            <!-- Usage -->
+            <h1>How to use the calculator?</h1>
+            <p>
+                Choose your grade and enter the grades for each subject.
+            </p>
+            <!-- GPA -->
+            <h1>What is GPA?</h1>
+            <p>
+                GPA stands for Grade Average Point. It is a form of way to
+                evaluate grades. It is usually used on a 4.0 scaling point,
+                meaning that the GPA is calculated out of 4.
+            </p>
+            <!-- CGPA -->
+            <h1>What is CGPA?</h1>
+            <p>
+                CGPA stands for Cumulative Grade Average Point. It is the
+                average of all GPAs achieved. For example, CGPA can be
+                calculated by getting the average between the first school
+                term and the second school term GPAs. Another example is
+                getting the average GPA from grade 9 through 12.
+            </p>
+            <!-- Weighted GPA vs. Unweighted GPA -->
+            <h1>
+                What is the difference between weighted and unweighted GPA?
+            </h1>
+            <p>
+                Weighted GPA gives more grades to AP, honors, IB, and
+                college classes. Unweighted GPA does not give any more
+                grades to them. Weighted GPA gives 0.5 GPA more to honors
+                classes and 1 GPA more to AP, IB, and college classes.
+                Capital International Schools does not provide weighted
+                GPA, but gives 10% more for AP classes.
+            </p>
+            <!-- Calculate Unweighted GPA -->
+            <h1>How do you calculate unweighted GPA?</h1>
+            <p>
+                The calculation is actually simple.
+                <ol>
+                    <li>
+                        Get the grade percentage or letter of each class
+                        and use the Grade's Key to get each class's GPA.
+                    </li>
+                    <li>
+                        Multiply each GPA by the amount of credit of the
+                        class. Each class is usually 1 credit hour.
+                    </li>
+                    <li>
+                        Add all the GPAs of all the classes together.
+                    </li>
+                    <li>
+                        Divide the sum by the total of credit hours taken.
+                    </li>
+                    <li>
+                        Voila! You have your GPA!
+                    </li>
+                </ol>
+            </p>
+            <!-- Calculate Weighted GPA -->
+            <h1>How do you calculate weighted GPA?</h1>
+            <p>
+                Do the same calculation for as the unweighted GPA, but make
+                sure that after step 1 you add 0.5 GPA to honors classes
+                and 1 GPA to AP, IB, or college classes. Capital
+                International Schools does not provide weighted GPA, but
+                gives 10% more for AP classes.
+            </p>
+            <!-- AP -->
+            <h1>What is AP?</h1>
+            <p>
+                AP stands for Advanced Placement. It is an series of exams
+                made by the <a href="https://www.collegeboard.org/">
+                College Board</a> that a student can choose from. They
+                give a change for the student to take college-level work
+                while they are still in school. They can sometimes be
+                exchanged fro college credits. For more information, visit
+                the <a href="https://ap.collegeboard.org/?navId=gf-ap">
+                AP website</a>.
+            </p>
+        </div>
+        <footer>
+            For any inquires, plz email me at
+            <a href="mailto:yousefalaadin050@gmail.com">
+                yousefalaadin050@gmail.com</a> :D
+        </footer>
+    </body>
+    <script src="index.js"></script>
+</html>

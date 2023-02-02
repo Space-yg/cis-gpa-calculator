@@ -1,0 +1,138 @@
+/* Origination */
+body, table {
+    /* Font */
+    text-align: center;
+    font-size: 16px;
+    font-family: "Arial Rounded MT", "Helvetica Neue", Helvetica, sans-serif;
+}
+body, input {
+    /* Color */
+    background-color: rgb(217, 236, 246);
+}
+
+/* Cool */
+.cool {
+    position: fixed;
+    height: 4px;
+    width: 100%;
+    background-color: blueviolet;
+    background-image: linear-gradient(to right, blue, blueviolet);
+    left: 0;
+    top: 0;
+}
+
+/* Table */
+table {
+    /* Position */
+    margin: 10px auto;
+    border-spacing: 0;
+    border-radius: 15px;
+    border: solid gray 1px;
+    /* Color */
+    background-color: white;
+}
+td {
+    padding: 5px;
+}
+
+/** Courses **/
+th {
+    /* Position */
+    padding: 10px;
+    border-bottom: solid gray 1px;
+}
+/* td */
+tbody.courses td {
+    /* Position */
+    padding: 10px 20px;
+}
+/* input */
+tbody.courses input, select, button {
+    /* Position */
+    padding: 5px;
+    border: 1px black solid;
+    border-radius: 6px;
+    /* Color */
+    background-color: white;
+}
+select {
+    /* Position */
+    padding: 4px;
+}
+tbody.courses span {
+    /* Font */
+    font-family: Arial;
+    font-size: 14px;
+}
+
+.gradeOption {
+    border: 1px gray solid;
+    border-radius: 0;
+    margin: -2.5px;
+    width: 100px;
+    cursor: pointer;
+}
+.gradeOption:hover {
+    background-color: lightgray;
+}
+.selectedGradeOption {
+    background-color: lightgray;
+    border-bottom: 3px solid black;
+}
+
+/* GPA */
+span.gpa {
+    /* Color */
+    color: currentColor;
+    /* Cursor */
+    cursor: default;
+}
+
+/* Warn */
+.warn {
+    /* Position */
+    display: none;
+    margin: 0;
+    /* Color */
+    color: red;
+}
+
+/** FAQ **/
+/* div */
+div.FAQ {
+    /* Position */
+    margin: auto;
+    padding: 10px 30px;
+    max-width: 750px;
+    min-width: 250px;
+    border: 1px solid gray;
+    border-radius: 20px;
+    /* Font */
+    text-align: left;
+    /* Color */
+    background-color: white;
+}
+/* h1 */
+div.FAQ h1 {
+    /* Font */
+    text-decoration: underline;
+}
+div.FAQ a {
+    color: black;
+}
+div.FAQ a:hover {
+    color: blue;
+}
+
+footer, footer a {
+    /* Position */
+    margin: 20px 0;
+    /* Color */
+    color: gray;
+    /* Font */
+    text-decoration: none;
+}
+a:hover {
+    /* Font */
+    text-decoration: underline;
+}
