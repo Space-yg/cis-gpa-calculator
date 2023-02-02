@@ -110,9 +110,9 @@ function changeCourse() {
             td1.appendChild(select);
         } else {
             // <span>Physical Education</span>
-            const span = document.createElement("span");
-            span.innerHTML = course;
-            td1.appendChild(span);
+            const p = document.createElement("p");
+            p.innerHTML = course;
+            td1.appendChild(p);
         }
         tr.appendChild(td1);
         
