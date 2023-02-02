@@ -146,9 +146,6 @@ a:hover {
 }
 
 @media (pointer:none), (pointer:coarse) {
-    p {
-        font-size: 12px;
-    }
     label {
         font-size: 24px;
     }
@@ -179,8 +176,11 @@ a:hover {
         padding: 20px 50px;
     }
     div.FAQ p, li {
-        line-height: 44px;
+        line-height: 30px;
         font-size: 18px;
+    }
+    div.FAQ h1 {
+        font-size: 32px;
     }
     footer {
         font-size: 12px;
