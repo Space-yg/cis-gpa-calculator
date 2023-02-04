@@ -166,8 +166,11 @@ a:hover {
     th, td {
         padding: 15px 10px;
     }
-    td p, td select, td input {
+    td p, td select {
         margin: 10px 0;
+    }
+    td input {
+        margin: 0;
     }
     /* Grade Option Button */
     button.gradeOption {
