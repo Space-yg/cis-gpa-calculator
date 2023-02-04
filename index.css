@@ -74,11 +74,13 @@ tbody.courses span {
 button.gradeOption {
     border: 1px gray solid;
     border-radius: 0;
-    margin: -2.5px;
     width: 100px;
     cursor: pointer;
 }
-button.gradeOption:first-of-type { border-radius: 10px 0 0 10px; }
+button.gradeOption:first-of-type {
+    border-radius: 10px 0 0 10px;
+    margin: 0 -5px 0 0;
+}
 button.gradeOption:last-of-type { border-radius: 0 10px 10px 0; }
 button.gradeOption:hover { background-color: lightgray; }
 button.selectedGradeOption {
@@ -138,6 +140,7 @@ a:hover {
 @media (pointer:none), (pointer:coarse) {
     /** General **/
     p {
+        line-height: 30px;
         font-size: 30px;
     }
     label {
@@ -154,14 +157,14 @@ a:hover {
         border-radius: 10px;
     }
     footer {
-        font-size: 12px;
+        font-size: 18px;
     }
     /* Table */
     table {
         border-radius: 30px;
     }
     th, td {
-        padding: 15px 0px;
+        padding: 15px 10px;
     }
     td p, td select, td input {
         margin: 10px 0;
@@ -171,12 +174,19 @@ a:hover {
         margin: -5px;
         width: 200px;
     }
-    button.gradeOption:first-of-type { border-radius: 20px 0 0 20px; }
-    button.gradeOption:last-of-type { border-radius: 0 20px 20px 0; }
+    button.gradeOption:first-of-type {
+        border-radius: 20px 0 0 20px;
+        margin: 0 -3.5px 0 10px;
+    }
+    button.gradeOption:last-of-type {
+        border-radius: 0 20px 20px 0;
+        margin: 0 10px 0 -3.5px;
+    }
     /* FAQ */
     div.FAQ {
         width: 90%;
-        padding: 20px 50px;
+        padding: 19px 40px;
+        border-radius: 40px;
     }
     div.FAQ p, li {
         line-height: 30px;
