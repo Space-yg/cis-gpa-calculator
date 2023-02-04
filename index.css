@@ -52,12 +52,13 @@ tbody.courses td {
     padding: 10px 20px;
 }
 /* input */
-tbody.courses input, select, button {
+input, select, button {
     /* Position */
     padding: 5px;
     border: 1px black solid;
     border-radius: 6px;
     /* Color */
+    color: black;
     background-color: white;
 }
 select {
@@ -79,9 +80,7 @@ button.gradeOption {
 }
 button.gradeOption:first-of-type { border-radius: 10px 0 0 10px; }
 button.gradeOption:last-of-type { border-radius: 0 10px 10px 0; }
-button.gradeOption:hover {
-    background-color: lightgray;
-}
+button.gradeOption:hover { background-color: lightgray; }
 button.selectedGradeOption {
     background-color: lightgray;
     border-bottom: 3px solid black;
@@ -105,7 +104,6 @@ span.gpa {
 }
 
 /** FAQ **/
-/* div */
 div.FAQ {
     /* Position */
     margin: auto;
@@ -119,17 +117,9 @@ div.FAQ {
     /* Color */
     background-color: white;
 }
-/* h1 */
-div.FAQ h1 {
-    /* Font */
-    text-decoration: underline;
-}
-div.FAQ a {
-    color: black;
-}
-div.FAQ a:hover {
-    color: blue;
-}
+div.FAQ h1 { text-decoration: underline; }
+div.FAQ a { color: black; }
+div.FAQ a:hover { color: blue; }
 
 /* Footer */
 footer, footer a {
@@ -146,31 +136,44 @@ a:hover {
 }
 
 @media (pointer:none), (pointer:coarse) {
+    /** General **/
+    p {
+        font-size: 30px;
+    }
     label {
         font-size: 24px;
     }
-    table, select, button {
+    table, select, button, input {
         font-size: 24px;
         padding: 10px 5px;
     }
+    select {
+        border-radius: 15px;
+    }
+    input {
+        border-radius: 10px;
+    }
+    footer {
+        font-size: 12px;
+    }
+    /* Table */
+    table {
+        border-radius: 30px;
+    }
+    th, td {
+        padding: 15px 0px;
+    }
+    td p, td select, td input {
+        margin: 10px 0;
+    }
+    /* Grade Option Button */
     button.gradeOption {
         margin: -5px;
         width: 200px;
     }
     button.gradeOption:first-of-type { border-radius: 20px 0 0 20px; }
     button.gradeOption:last-of-type { border-radius: 0 20px 20px 0; }
-    select {
-        border-radius: 15px;
-    }
-    table {
-        border-radius: 30px;
-    }
-    th, td {
-        padding: 15px;
-    }
-    td p {
-        font-size: 30px;
-    }
+    /* FAQ */
     div.FAQ {
         width: 90%;
         padding: 20px 50px;
@@ -181,8 +184,5 @@ a:hover {
     }
     div.FAQ h1 {
         font-size: 32px;
-    }
-    footer {
-        font-size: 12px;
     }
 }
