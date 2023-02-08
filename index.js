@@ -3,6 +3,7 @@ const selectedGrade = document.getElementById("grade");
 const coursesBody = document.getElementById("courses");
 const gradeOptionLetter = document.getElementById("gradeOptionLetter");
 const gradeOptionPercentage = document.getElementById("gradeOptionPercentage");
+const coursesNote = document.getElementById("note");
 // GPA
 const gpa = document.getElementById("gpa");
 const warn = document.getElementById("warn");
@@ -15,16 +16,16 @@ const gradeCourses = {
         "English",
         "Math",
         "Science",
+        "Social Studies",
         ["German", "French", "Spanish"],
-        ["Art", "Music", "Innovation Lab", "Computer Science", "Drama", "Marital Arts"],
         "Physical Education"
     ],
     "10": [
         "English",
         "Math",
         "Chemistry",
+        "Social Studies",
         ["German", "French", "Spanish"],
-        ["Computer Science", "Art", "Music", "Marital Arts"],
         "Physical Education"
     ],
     "11": [
@@ -122,6 +123,16 @@ function changeCourse() {
 
         coursesBody.appendChild(tr);
     });
+    if (selectedGrade.value === "9") {
+        coursesNote.innerHTML = "Note: Art, Music, Innovation Lab, Computer<br>Science, Drama, and Marital Arts have no credits.";
+        coursesNote.parentElement.parentElement.style.display = "table-row";
+    } else if (selectedGrade.value === "10") {
+        coursesNote.innerHTML = "Note: Computer Science, Art, Music,<br>and Marital Arts have no credits.";
+        coursesNote.parentElement.parentElement.style.display = "table-row";
+    } else {
+        coursesNote.innerHTML = "";
+        coursesNote.parentElement.parentElement.style.display = "none";
+    }
     changeGrade();
 }
 
