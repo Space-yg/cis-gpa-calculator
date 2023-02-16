@@ -55,17 +55,17 @@ const letterToGPA = {
 };
 const percentageToGPA = {
     "4": { max: 100, min: 93 },
-    "3.9": { max: 92, min: 90 },
-    "3.7": { max: 89, min: 87 },
-    "3.4": { max: 86, min: 83 },
-    "3": { max: 82, min: 80 },
-    "2.7": { max: 79, min: 77 },
-    "2.4": { max: 76, min: 73 },
-    "2": { max: 72, min: 70 },
-    "1.7": { max: 69, min: 67 },
-    "1.4": { max: 66, min: 63 },
-    "1": { max: 62, min: 60 },
-    "0": { max: 59, min: 0 }
+    "3.9": { max: 93, min: 90 },
+    "3.7": { max: 90, min: 87 },
+    "3.4": { max: 87, min: 83 },
+    "3": { max: 83, min: 80 },
+    "2.7": { max: 80, min: 77 },
+    "2.4": { max: 77, min: 73 },
+    "2": { max: 73, min: 70 },
+    "1.7": { max: 70, min: 67 },
+    "1.4": { max: 67, min: 63 },
+    "1": { max: 63, min: 60 },
+    "0": { max: 60, min: 0 }
 };
 
 // Change grades to letters
@@ -181,7 +181,7 @@ function calculateGPA() {
             // Check if empty
             if (tds[1].firstChild.value.length === 0) return;
             if (0 > Number(tds[1].firstChild.value) || Number(tds[1].firstChild.value) > 100) return warn.style.display = "block";
-            for (const g in percentageToGPA) if (percentageToGPA[g].min <= Number(tds[1].firstChild.value) && Number(tds[1].firstChild.value) <= percentageToGPA[g].max) {
+            for (const g in percentageToGPA) if (percentageToGPA[g].min <= Number(tds[1].firstChild.value) && Number(tds[1].firstChild.value) < percentageToGPA[g].max) {
                 grade += Number(g) * ((tds[0].firstChild.innerText === "Physical Education") ? 0.5 : 1);
                 break;
             }
